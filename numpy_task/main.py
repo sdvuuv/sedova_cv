@@ -26,7 +26,7 @@ fc = f[::2, 1::2]
 assert np.all(fc == np.array([[1, 3], [11, 13], [21, 23]]))
 
 g = np.ones((5, 3))
-gc = (g*3).flatten()[:5:].reshape(1,5)
+gc = np.sum(g, axis = 1)
 
 assert np.all(gc == np.array([3., 3., 3., 3., 3.]))
 
