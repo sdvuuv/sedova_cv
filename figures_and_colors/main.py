@@ -27,7 +27,7 @@ for i in range(1, countLabels):
     area = stats[i, cv2.CC_STAT_AREA]
     (cX, cY) = centroids[i]
 
-    part = img[y:y + h, x:x + w]
+    part = img_hsv[y:y + h, x:x + w]
     hue = part[h // 2, w // 2, 0]
     if area == w * h:
         if hue not in colors_dict_rectangles.keys():
