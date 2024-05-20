@@ -25,7 +25,6 @@ def count_holes(region):
     holes = 0
     labeled = label(np.logical_not(region.image))
     regions = regionprops(labeled)
-
     for region in regions:
         not_bound = True
         coords = np.where(labeled == region.label)
